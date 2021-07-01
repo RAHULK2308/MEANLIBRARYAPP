@@ -1,0 +1,27 @@
+.card-body {
+    font-size: medium;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.card-body input{
+    margin-left: 20px;
+}
+
+ #uname{
+    margin-left: 38px;
+}
+
+#email{
+    margin-left: 80px;
+}
+
+#password{
+    margin-left: 50px;
+}
+
+.card-body small{
+    margin: 170px;
+}
+
+

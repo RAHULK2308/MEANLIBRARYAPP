@@ -1,0 +1,42 @@
+<div class='card col-md-2'>
+    <div class='card-header'>
+     {{Authors.name}}
+    </div>
+    
+    <div class='card-body '>            
+      <div class='table-responsive'>
+        <table class='table' >
+              <!-- *ngIf = 'products && products.length'> -->
+         
+          <tbody>  
+              <tr >
+                  <td><img 
+                    [src] = 'Authors.image' 
+                    [title] = 'Authors.title'
+                    [style.width.px] = 'imageWidth' 
+                    [style.margin.px] = 'imageMargin'></td>
+                </tr>
+                <tr>
+                  <td>
+                    
+                  Name : {{ Authors.name }}</td>
+                </tr>
+                <tr>
+                  <td>
+                    DOB : {{ Authors.DOB }}</td>
+                    </tr>
+                    <tr>
+                  <td>
+                   Book : {{ Authors.Book }}</td>
+                    </tr>
+                  <td>
+                   
+                  </td>
+                             
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
+

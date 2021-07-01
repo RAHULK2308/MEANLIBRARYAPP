@@ -1,0 +1,10 @@
+<div class="header">
+    <a class="first"routerLink="/">HOME</a>
+    <a routerLink="/books" *ngIf="auth.loggedIn() || auth.LoggedIn()  ">BOOKS</a>
+    <a routerLink="/addBooks" *ngIf="auth.loggedIn()">ADD BOOKS</a>
+    <a routerLink="/authors" *ngIf="auth.loggedIn() || auth.LoggedIn()">AUTHORS</a>
+    <a routerLink="/addAuthors" *ngIf="auth.loggedIn()">ADD AUTHORS</a>
+    <a routerLink="/login" *ngIf="!auth.loggedIn() && !auth.LoggedIn()">LOGIN</a>
+    <a routerLink="/signup" *ngIf="!auth.loggedIn() && !auth.LoggedIn()">SIGNUP</a>
+    <a routerLink="/logout" *ngIf="auth.loggedIn() || auth.LoggedIn()" (click)="logoutUser()">LOGOUT</a>
+</div>

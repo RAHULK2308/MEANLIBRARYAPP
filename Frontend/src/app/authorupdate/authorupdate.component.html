@@ -1,0 +1,36 @@
+<div class='card'>
+    <form (ngSubmit)="editBook()">
+<div class='card-header'>
+ Edit Author
+</div>
+<div class='card-body'>            
+  <div class='table-responsive'>
+    <table class='table'>       
+    
+        <tbody>  
+            <tr>
+                <td> <label> Name :</label></td>
+                <td><input type="text" name="Authors_name" [(ngModel)]="author.name"/></td>                  
+              </tr>   
+              <tr>
+                  <td><label>DOB :</label></td>
+                  <td><input type="text" name="Author_DOB" [(ngModel)]="author.DOB"/></td>                  
+                </tr>  
+                <tr>
+                  <td><label>BOOK</label></td>
+                  <td><input type="text" name="Author_Book" [(ngModel)]="author.Book"/></td>                  
+                </tr>    
+                <tr>
+                  <td><label>Image :</label></td>
+                  <td><input type="text" name="Author_image" [(ngModel)]="author.image"/></td>                  
+                </tr>  
+                <tr>
+                  <td></td>
+                  <td><input type="submit" value="Submit" /></td>                  
+                </tr>             
+        </tbody>
+      </table>
+    </div>
+  </div>
+  </form>
+  </div>

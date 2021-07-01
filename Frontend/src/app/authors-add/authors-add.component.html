@@ -1,0 +1,37 @@
+<div class='card'>
+    
+<div class='card-header'>
+ ADD AUTHOR
+</div>
+<div class='card-body'>            
+  <div class='table-responsive'>
+    <form (ngSubmit)="AddAuthor()" #addAuthor="ngForm">
+    <table class='table'>       
+      <tbody>  
+          <tr>
+              <td> <label> Name :</label></td>
+              <td><input type="text" name="Author_name" [(ngModel)]="author.name" required/></td>                  
+            </tr>   
+            <tr>
+                <td><label>DOB :</label></td>
+                <td><input type="text" name="Author_DOB" [(ngModel)]="author.DOB" required/></td>                  
+              </tr>  
+              <tr>
+                <td><label>Book :</label></td>
+                <td><input type="text" name="Author_Book" [(ngModel)]="author.Book" required/></td>                  
+              </tr>    
+              <tr>
+                <td><label>ImageUrl :</label></td>
+                <td><input type="text" name="Author_image" [(ngModel)]="author.image" required/></td>                  
+              </tr>  
+              <tr>
+                <td></td>
+                <td><input type="submit" value="Submit" [disabled]="addAuthor.form.invalid" /></td>                  
+              </tr>             
+      </tbody>
+    </table>
+  </form>
+  </div>
+</div>
+</div>
+

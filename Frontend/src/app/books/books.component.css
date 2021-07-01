@@ -1,0 +1,18 @@
+.card-header{
+    color: blue;
+    font-size: larger;
+    font-weight: bolder;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.card-body tbody{
+    font-size: medium;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.card-body thead {
+    font-size: medium;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+}

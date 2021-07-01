@@ -1,0 +1,49 @@
+<div class='card'>
+    <div class='card-header'>
+     {{pageTitle}}
+    </div>
+    
+    <div class='card-body'>            
+      <div class='table-responsive'>
+        <table class='table'>
+              <!-- *ngIf = 'products && products.length'> -->
+          <thead>
+            <tr>
+              <th>
+               Image
+              </th>
+              <th>Title</th>
+              <th>Author</th>
+              <th>Genre</th>
+            </tr>
+           
+          </thead>
+          <tbody>  
+              <tr *ngFor='let books of Books'>
+                  <td><img 
+                    [src] = 'books.image' 
+                    [title] = 'books.title'
+                    [style.width.px] = 'imageWidth' 
+                    [style.margin.px] = 'imageMargin'></td>
+                  <td>
+                    <br><br>
+                    {{ books.title }}</td>
+                  <td>
+                    <br><br>
+                    {{ books.author }}</td>
+                  <td>
+                    <br><br>
+                    {{ books.genre }}</td>
+                  <td>
+                    <br><br>
+                     <button class="btn btn-warning" style="cursor:pointer"  (click)="editBook(books)" style="margin-left: 20px;"  *ngIf="auth.loggedIn()"> Edit</button> 
+                    <button class="btn btn-danger" style="cursor:pointer"  (click)="deleteBook(books)" style="margin-left: 20px;" *ngIf="auth.loggedIn()"> Delete</button>
+                    <button class="btn btn-primary" style="cursor:pointer"  (click)="singleBook(books)" style="margin-left: 20px;" *ngIf="auth.loggedIn() || auth.LoggedIn()"> See More</button>
+                  </td>
+                </tr>              
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  

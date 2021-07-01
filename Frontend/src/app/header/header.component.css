@@ -1,0 +1,19 @@
+.header{
+    background-color:#010538;
+    padding: 20px; 
+    border: 1px solid ; 
+    border-radius: 1px #010538;
+}
+
+a{
+    color: white;
+    margin: 5px;
+    font-size: medium;
+    padding: 3px;
+    text-decoration: none;
+}
+
+a:hover{
+    color: brown;
+}
+

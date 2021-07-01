@@ -1,0 +1,50 @@
+<div class='card'>
+    <div class='card-header'>
+     {{pageTitle}}
+    </div>
+    
+    <div class='card-body'>            
+      <div class='table-responsive'>
+        <table class='table'>
+              <!-- *ngIf = 'products && products.length'> -->
+          <thead>
+            <tr>
+              <th>
+               Image
+              </th>
+              <th>Name</th>
+              <th>DOB</th>
+              <th>Book</th>
+            </tr>
+           
+          </thead>
+          <tbody>  
+              <tr *ngFor='let authors of Authors'>
+                  <td><img 
+                    [src] = 'authors.image' 
+                    [title] = 'authors.title'
+                    [style.width.px] = 'imageWidth' 
+                    [style.margin.px] = 'imageMargin'></td>
+                  <td>
+                    <br><br>
+                    {{ authors.name }}</td>
+                  <td>
+                    <br><br>
+                    {{ authors.DOB }}</td>
+                  <td>
+                    <br><br>
+                    {{ authors.Book }}</td>
+                  <td>
+                    <br><br>
+                     <button class="btn btn-warning" style="cursor:pointer"  (click)="editAuthor(authors)" style="margin-left: 20px;"  *ngIf="auth.loggedIn()"> Edit</button> 
+                    <button class="btn btn-danger" style="cursor:pointer" (click)="deleteAuthor(authors)" style="margin-left: 20px;"  *ngIf="auth.loggedIn()"> Delete</button>
+                    <button class="btn btn-primary" style="cursor:pointer"  (click)="singleAuthor(authors)" style="margin-left: 20px;" *ngIf="auth.loggedIn() || auth.LoggedIn()"> See More</button>
+                  </td>
+                </tr>              
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
+

@@ -1,0 +1,47 @@
+<div class="py-5">
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <span class="anchor" id="formLogin"></span>
+  
+        <!-- form card login -->
+        <div class="card rounded-0">
+          <div class="card-header">
+            <h3 class="mb-0">SignUp</h3>
+          </div>
+          <div class="card-body">
+            <form  (ngSubmit)="AddUser()" #userSignup="ngForm">
+                <div >
+                    <label for="UserName">User name </label>
+                    <input type="text" name="uname" id="uname" [(ngModel)]="user.uname"  required/>
+                 
+                    </div>
+                    <br>
+                  
+              <div >
+                <label for="Email">Email</label>
+                <input type="email" name="email" id="email" [(ngModel)]="user.email" pattern="^[a-zA-Z0-9.%+]+@[a-zA-Z0-9.-]+\.[a-z]{2,4}" required/>
+             
+                </div>
+                
+                <br>
+              <div>
+                <label>Password</label>
+                <input type="password" name="password" id="password" #password="ngModel" [class.is-invalid]=" password.touched" [(ngModel)]="user.password" required minlength="8"/>
+              <br> 
+              <small [class.d.none]=" password.touched"> Minimum Length of  Password 8</small>
+              </div>
+                
+              
+                <br>
+              <button type="submit" [disabled]="userSignup.form.invalid" class="btn btn-success float-right">SignUp</button>
+            </form>                             
+          </div>
+          <!--/card-block-->
+        </div>
+        <!-- /form card login -->
+  
+      </div>
+  
+  
+    </div>
+  </div>
